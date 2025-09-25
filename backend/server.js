@@ -11,11 +11,21 @@ const PORT = 4000;
 const JWT_SECRET = "super_secret_jwt_key"; // use .env in production
 
 // ---------------------- PostgreSQL Pool ----------------------
+// const pool = new Pool({
+//   user: "postgres",
+//   host: "localhost", 
+//   host: "dpg-d3aqonvfte5s7398flkg-a",
+//   database: "multitenant-project-mgmt",
+//   password: "Sarthak@2002",
+//   port: 5432,
+// });
+
+
 const pool = new Pool({
-  user: "postgres",
-  host: "localhost",
-  database: "multitenant-project-mgmt",
-  password: "Sarthak@2002",
+  user: "multitenantprojectmgmt_user",
+  host: "dpg-d3aqonvfte5s7398flkg-a.oregon-postgres.render.com", // external host
+  database: "multitenantprojectmgmt",
+  password: "PtrIS9ubosfj1Ywg0gY0ugdQvn75lTui",
   port: 5432,
 });
 
