@@ -23,10 +23,13 @@ const JWT_SECRET = "super_secret_jwt_key"; // use .env in production
 
 const pool = new Pool({
   user: "multitenantprojectmgmt_user",
-  host: "dpg-d3aqonvfte5s7398flkg-a.oregon-postgres.render.com", // external host
+  host: "dpg-d3aqonvfte5s7398flkg-a.oregon-postgres.render.com",
   database: "multitenantprojectmgmt",
   password: "PtrIS9ubosfj1Ywg0gY0ugdQvn75lTui",
   port: 5432,
+  ssl: {
+    rejectUnauthorized: false, // necessary for Render external Postgres
+  },
 });
 
 // ---------------------- GraphQL TypeDefs ----------------------
